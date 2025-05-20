@@ -261,7 +261,7 @@ def add_text_to_chroma(text, doc_id):
         return False
 
 # Query ChromaDB
-def query_chroma(query, top_k=3):
+def query_chroma(query, top_k=1):
     try:
         query_embedding = embedding_model.encode(query).tolist()
         results = collection.query(
